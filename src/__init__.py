@@ -45,5 +45,5 @@ Highlights
 Authors
 ------
 Łukasz Kułacz - initial implementation, testing, documentation
-
+Cezary Greczyn - refactoring, additional tests, documentation improvements
 """
