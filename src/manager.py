@@ -90,7 +90,12 @@ class Manager:
         year: int = None,
         month: int = None,
     ) -> float | None:
-        """Return total apartment costs, optional year/month filter."""
+        """Return total apartment costs, optional year/month filter.
+
+        Example:
+            cost = manager.get_apartment_costs("A1", 2024, 9)
+
+        """
         if month is not None and (month < 1 or month > 12):
             raise ValueError("Month must be between 1 and 12")
         if apartment_key not in self.apartments:
@@ -132,7 +137,12 @@ class Manager:
         self,
         apartment_settlement: ApartmentSettlement,
     ) -> list[TenantSettlement] | None:
-        """Create tenant settlements from an apartment settlement."""
+        """Create tenant settlements from an apartment settlement.
+
+        Example:
+            settlements = manager.create_tenants_settlements(settlement)
+
+        """
         if apartment_settlement.month < 1 or apartment_settlement.month > 12:
             raise ValueError("Month must be between 1 and 12")
         if apartment_settlement.apartment not in self.apartments:
